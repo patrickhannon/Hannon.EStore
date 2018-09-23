@@ -1,0 +1,8 @@
+http://localhost:15034/ProductDetails?productid=2
+https://developer.paypal.com
+patrick_hannon-facilitator@hotmail.com
+paypal credentials:
+username:patrick_hannon-facilitator_api1.hotmail.com
+password:2UHARN7BHPE2SHPB
+signature:AFcWxV21C7fd0v3bYYYRCpSSRl31A.zCciQagj4ixaixbvQEoQd8C8wc
+currentpage:
