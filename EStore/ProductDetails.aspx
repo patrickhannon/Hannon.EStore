@@ -20,6 +20,13 @@
                         <br />
                         <span><b>Product Number:</b>&nbsp;<%#:Item.ProductId %></span>
                         <br />
+                        <span><b>Sku:</b>&nbsp;<%#:Item.Sku %></span>
+                        <br />
+                        <span><b>Manufacturer:</b>&nbsp;<%#:Item.Manufacturer %></span>
+                        <br />
+                        <span><b>Quantity Left:</b>&nbsp;<%#:Item.QuantityInStock %></span>
+                        <br />
+                        <span><b>Weight:</b>&nbsp;<%#:String.Format("{0:c} Oz", Item.Weight) %></span>
                     </td>
                 </tr>
             </table>

@@ -5,4 +5,16 @@ paypal credentials:
 username:patrick_hannon-facilitator_api1.hotmail.com
 password:2UHARN7BHPE2SHPB
 signature:AFcWxV21C7fd0v3bYYYRCpSSRl31A.zCciQagj4ixaixbvQEoQd8C8wc
-currentpage:
+currentpage:152
+
+Update cart to contain the following fields done
+QuantityInStock
+Weight
+Sku
+Manufacturer
+
+Update seed done
+
+
+
+Update grid 

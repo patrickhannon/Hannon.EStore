@@ -19,5 +19,10 @@ namespace EStore.Models
         public double? UnitPrice { get; set; }
         public int? CategoryId { get; set; }
         public virtual Category Category { get; set; }
+        public int QuantityInStock { get; set; }
+        public string Sku { get; set; }
+        public double Weight { get; set; }
+        public string Manufacturer { get; set; }
+
     }
 }

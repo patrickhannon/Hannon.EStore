@@ -55,7 +55,11 @@ namespace EStore.Models
                                   "Power it up and let it go!", 
                     ImagePath="carconvert.png",
                     UnitPrice = 22.50,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    QuantityInStock = 5,
+                    Sku = "000001",
+                    Weight = 20.5,
+                    Manufacturer = "Matchbox"
                },
                 new Product 
                 {
@@ -64,7 +68,11 @@ namespace EStore.Models
                     Description = "There's nothing old about this toy car, except it's looks. Compatible with other old toy cars.",
                     ImagePath="carearly.png",
                     UnitPrice = 15.95,
-                     CategoryId = 1
+                    CategoryId = 1,
+                    QuantityInStock = 3,
+                    Sku = "000002",
+                    Weight = 22.5,
+                    Manufacturer = "Matchbox"
                },
                 new Product
                 {
@@ -73,7 +81,11 @@ namespace EStore.Models
                     Description = "Yes this car is fast, but it also floats in water.",
                     ImagePath="carfast.png",
                     UnitPrice = 32.99,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    QuantityInStock =1,
+                    Sku = "000003",
+                    Weight = 18.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -82,7 +94,11 @@ namespace EStore.Models
                     Description = "Use this super fast car to entertain guests. Lights and doors work!",
                     ImagePath="carfaster.png",
                     UnitPrice = 8.95,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    QuantityInStock = 5,
+                    Sku = "000004",
+                    Weight = 24.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -92,7 +108,11 @@ namespace EStore.Models
                                   "No batteries required.",
                     ImagePath="carracer.png",
                     UnitPrice = 34.95,
-                    CategoryId = 1
+                    CategoryId = 1,
+                    QuantityInStock = 34,
+                    Sku = "000005",
+                    Weight = 30.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -101,7 +121,11 @@ namespace EStore.Models
                     Description = "Authentic airplane toy. Features realistic color and details.",
                     ImagePath="planeace.png",
                     UnitPrice = 95.00,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    QuantityInStock = 2,
+                    Sku = "000006",
+                    Weight = 1.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -110,7 +134,11 @@ namespace EStore.Models
                     Description = "This fun glider is made from real balsa wood. Some assembly required.",
                     ImagePath="planeglider.png",
                     UnitPrice = 4.95,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    QuantityInStock = 6,
+                    Sku = "000007",
+                    Weight = 2.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -119,7 +147,11 @@ namespace EStore.Models
                     Description = "This paper plane is like no other paper plane. Some folding required.",
                     ImagePath="planepaper.png",
                     UnitPrice = 2.95,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    QuantityInStock = 15,
+                    Sku = "000008",
+                    Weight = 18.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -128,7 +160,11 @@ namespace EStore.Models
                     Description = "Rubber band powered plane features two wheels.",
                     ImagePath="planeprop.png",
                     UnitPrice = 32.95,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    QuantityInStock = 25,
+                    Sku = "000009",
+                    Weight = 18.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -137,7 +173,11 @@ namespace EStore.Models
                     Description = "This toy truck has a real gas powered engine. Requires regular tune ups.",
                     ImagePath="truckearly.png",
                     UnitPrice = 15.00,
-                    CategoryId = 3
+                    CategoryId = 3,
+                    QuantityInStock = 35,
+                    Sku = "000010",
+                    Weight = 11.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -146,7 +186,11 @@ namespace EStore.Models
                     Description = "You will have endless fun with this one quarter sized fire truck.",
                     ImagePath="truckfire.png",
                     UnitPrice = 26.00,
-                    CategoryId = 3
+                    CategoryId = 3,
+                    QuantityInStock = 45,
+                    Sku = "000011",
+                    Weight = 12.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -155,7 +199,11 @@ namespace EStore.Models
                     Description = "This fun toy truck can be used to tow other trucks that are not as big.",
                     ImagePath="truckbig.png",
                     UnitPrice = 29.00,
-                    CategoryId = 3
+                    CategoryId = 3,
+                    QuantityInStock = 5,
+                    Sku = "000012",
+                    Weight = 22.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -165,7 +213,11 @@ namespace EStore.Models
                                   "artifically intelligent computer brain!",
                     ImagePath="boatbig.png",
                     UnitPrice = 95.00,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    QuantityInStock = 75,
+                    Sku = "000013",
+                    Weight = 20.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -175,7 +227,11 @@ namespace EStore.Models
                                   "Some folding required.",
                     ImagePath="boatpaper.png",
                     UnitPrice = 4.95,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    QuantityInStock = 5,
+                    Sku = "000015",
+                    Weight = 20.5,
+                    Manufacturer = "Matchbox"
                 },
                 new Product
                 {
@@ -184,7 +240,11 @@ namespace EStore.Models
                     Description = "Put this fun toy sail boat in the water and let it go!",
                     ImagePath="boatsail.png",
                     UnitPrice = 42.95,
-                    CategoryId = 4
+                    CategoryId = 4,
+                    QuantityInStock = 2,
+                    Sku = "000014",
+                    Weight = 20.5,
+                    Manufacturer = "Kid Kraft"
                 },
                 new Product
                 {
@@ -193,7 +253,11 @@ namespace EStore.Models
                     Description = "This fun rocket will travel up to a height of 200 feet.",
                     ImagePath="rocket.png",
                     UnitPrice = 122.95,
-                    CategoryId = 5
+                    CategoryId = 5,
+                    QuantityInStock = 5,
+                    Sku = "000001",
+                    Weight = 20.5,
+                    Manufacturer = "Kid Kraft"
                 }
             };
 

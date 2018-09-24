@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -8,6 +9,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using EStore.Models;
+using Microsoft.ApplicationInsights.Extensibility;
 
 namespace EStore
 {
@@ -18,7 +20,7 @@ namespace EStore
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            DisableApplicationInsightsOnDebug();
             // Initialize the product database.
             Database.SetInitializer(new ProductDatabaseInitializer());
 
@@ -42,6 +44,14 @@ namespace EStore
                 "Product/{productName}",
                 "~/ProductDetails.aspx"
             );
+        }
+        /// <summary>
+        /// Disables the application insights locally.
+        /// </summary>
+        [Conditional("DEBUG")]
+        private static void DisableApplicationInsightsOnDebug()
+        {
+            TelemetryConfiguration.Active.DisableTelemetry = true;
         }
     }
 }
