@@ -12,6 +12,7 @@ namespace EStore
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
+        private decimal shippingTotal = 14.01m;
         protected void Page_Load(object sender, EventArgs e)
         {
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
@@ -21,7 +22,9 @@ namespace EStore
                 if (cartTotal > 0)
                 {
                     // Display Total.
-                    lblTotal.Text = String.Format("{0:c}", cartTotal);
+                    var total = shippingTotal + cartTotal;
+                    lblShippingTotal.Text = String.Format("{0:c}", shippingTotal);
+                    lblTotal.Text = String.Format("{0:c}", total);
                 }
                 else
                 {
@@ -65,7 +68,8 @@ namespace EStore
                 }
                 usersShoppingCart.UpdateShoppingCartDatabase(cartId, cartUpdates);
                 CartList.DataBind();
-                lblTotal.Text = String.Format("{0:c}", usersShoppingCart.GetTotal());
+                var total = shippingTotal + usersShoppingCart.GetTotal();
+                lblTotal.Text = String.Format("{0:c}", total);
                 return usersShoppingCart.GetCartItems();
             }
         }

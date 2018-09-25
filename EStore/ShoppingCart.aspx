@@ -28,6 +28,9 @@
     <div>
         <p></p>
         <strong>
+            <asp:Label ID="LabelShippingTotalText" runat="server" Text="Shipping Total: "></asp:Label>
+            <asp:Label ID="lblShippingTotal" runat="server" EnableViewState="false"></asp:Label>
+            <br>
             <asp:Label ID="LabelTotalText" runat="server" Text="Order Total: "></asp:Label>
             <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
         </strong> 

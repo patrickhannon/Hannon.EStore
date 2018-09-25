@@ -260,6 +260,7 @@
     <Content Include="Catalog\Images\Thumbs\Thumbs.db" />
     <Content Include="Checkout\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Images\discontinued_stock.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductList.aspx" />
@@ -493,6 +494,10 @@
     <Compile Include="Mocks\MockData.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ConfigureModel.cs" />
+    <Compile Include="Models\FreightOptions.cs" />
+    <Compile Include="Models\FreightRequest.cs" />
+    <Compile Include="Models\FreightResponse.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />

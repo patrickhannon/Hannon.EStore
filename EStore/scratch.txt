@@ -12,9 +12,8 @@ QuantityInStock
 Weight
 Sku
 Manufacturer
-
 Update seed done
-
-
-
 Update grid 
+
+How to: Reference ASP.NET Master Page Content
+https://msdn.microsoft.com/en-us/library/xxwa0ff0.aspx?f=255&MSPPError=-2147217396

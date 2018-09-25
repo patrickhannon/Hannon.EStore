@@ -19,9 +19,12 @@ namespace EStore
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        public ConfigureModel Configure = ConfigureModel.Instance;
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            
+            
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
@@ -89,9 +92,8 @@ namespace EStore
 
         public IQueryable<Category> GetCategories()
         {
-            var mockCategories = MockData.GetCategories();
-            //var _db = new WingtipToys.Models.ProductContext();
-            IQueryable<Category> query = mockCategories.AsQueryable();
+            var _db = new EStore.Models.ProductContext();
+            IQueryable<Category> query = _db.Categories;
             return query;
         }
 

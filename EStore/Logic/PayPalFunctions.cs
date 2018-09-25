@@ -18,7 +18,7 @@ public class NVPAPICaller
     //Flag that determines the PayPal environment (live or sandbox)
     private const bool bSandbox = true;
     private const string CVV2 = "CVV2";
-
+    private ConfigureModel configure = ConfigureModel.Instance;
     // Live strings.
     private string pEndPointURL = "https://api-3t.paypal.com/nvp";
     private string host = "www.paypal.com";
@@ -67,7 +67,8 @@ public class NVPAPICaller
         encoder["METHOD"] = "SetExpressCheckout";
         encoder["RETURNURL"] = returnURL;
         encoder["CANCELURL"] = cancelURL;
-        encoder["BRANDNAME"] = "Wingtip Toys Sample Application";
+        
+        encoder["BRANDNAME"] = configure.SiteName;
         encoder["PAYMENTREQUEST_0_AMT"] = amt;
         encoder["PAYMENTREQUEST_0_ITEMAMT"] = amt;
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";

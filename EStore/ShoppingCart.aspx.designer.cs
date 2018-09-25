@@ -31,6 +31,24 @@ namespace EStore {
         protected global::System.Web.UI.WebControls.GridView CartList;
         
         /// <summary>
+        /// LabelShippingTotalText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelShippingTotalText;
+        
+        /// <summary>
+        /// lblShippingTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblShippingTotal;
+        
+        /// <summary>
         /// LabelTotalText control.
         /// </summary>
         /// <remarks>
