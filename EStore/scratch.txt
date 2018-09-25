@@ -17,3 +17,23 @@ Update grid
 
 How to: Reference ASP.NET Master Page Content
 https://msdn.microsoft.com/en-us/library/xxwa0ff0.aspx?f=255&MSPPError=-2147217396
+
+if (HttpContext.Current.User.IsInRole("Administrator")) 
+{ 
+	adminLink.Visible = true; 
+}
+Use the following administrator user name and password: 
+User name: Admin Password: Pa$$word
+    UserName = "canEditUser@wingtiptoys.com",
+                Email = "canEditUser@wingtiptoys.com"
+            };
+            IdUserResult = userMgr.Create(appUser, "Pa$$word1");
+
+canEditUser@wingtiptoys.com
+Pa$$word1
+{"Validation of Anti-XSRF token failed."}
+http://forums.asp.net/t/1887150.aspx/1
+
+http://stackoverflow.com/questions/2206595/how-do-i-solve-an-antiforgerytoken-exception-that-occurs-after-an-iisreset-in-my
+
+Clear Browser Cache Cookies and test again.

@@ -10,6 +10,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using EStore.Models;
 using Microsoft.ApplicationInsights.Extensibility;
+using EStore.Logic;
 
 namespace EStore
 {
@@ -25,8 +26,8 @@ namespace EStore
             Database.SetInitializer(new ProductDatabaseInitializer());
 
             // Create the custom role and user.
-            //RoleActions roleActions = new RoleActions();
-            //roleActions.AddUserAndRole();
+            RoleActions roleActions = new RoleActions();
+            roleActions.CreateAdmin();
 
 
             // Add Routes.
