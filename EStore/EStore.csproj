@@ -200,6 +200,8 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="AddToCart.aspx" />
     <Content Include="Admin\AdminPage.aspx" />
+    <Content Include="Admin\Category.aspx" />
+    <Content Include="Admin\Product.aspx" />
     <Content Include="Catalog\Images\boatbig.png" />
     <Content Include="Catalog\Images\boatpaper.png" />
     <Content Include="Catalog\Images\boatsail.png" />
@@ -216,6 +218,7 @@
     <Content Include="Catalog\Images\planepaper.png" />
     <Content Include="Catalog\Images\planeprop.png" />
     <Content Include="Catalog\Images\rocket.png" />
+    <Content Include="Catalog\Images\Thumbs\555776486.jpeg" />
     <Content Include="Catalog\Images\Thumbs\boatbig.png" />
     <Content Include="Catalog\Images\Thumbs\boatpaper.png" />
     <Content Include="Catalog\Images\Thumbs\boatsail.png" />
@@ -431,6 +434,20 @@
     </Compile>
     <Compile Include="Admin\AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
