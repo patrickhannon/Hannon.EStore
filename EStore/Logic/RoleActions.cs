@@ -31,23 +31,40 @@ namespace EStore.Logic
                 IdRoleResult = roleMgr.Create(new IdentityRole { Name = "canEdit" });
             }
 
-            // Create a UserManager object based on the UserStore object and the ApplicationDbContext  
-            // object. Note that you can create new objects and use them as parameters in
-            // a single line of code, rather than using multiple lines of code, as you did
-            // for the RoleManager object.
+            if (!roleMgr.RoleExists("Administrator"))
+            {
+                IdRoleResult = roleMgr.Create(new IdentityRole("Administrator"));
+                if (!IdRoleResult.Succeeded)
+                {
+                    // Handle the error condition if there's a problem creating the RoleManager object. } }
+
+                    // Create a UserManager object based on the UserStore object and the ApplicationDbContext  
+                    // object. Note that you can create new objects and use them as parameters in
+                    // a single line of code, rather than using multiple lines of code, as you did
+                    // for the RoleManager object
+                }
+            }
+
             var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
             var appUser = new ApplicationUser
             {
                 UserName = "canEditUser@wingtiptoys.com",
-                Email = "canEditUser@wingtiptoys.com"
+                Email = "canEditUser@wingtiptoys.com",
+                
             };
             IdUserResult = userMgr.Create(appUser, "Pa$$word1");
-
+            //userMgr.AddToRoleAsync(appUser.UserName, "Administrator");
+            //userMgr.AddToRole(appUser.Id, "Administrator");
             // If the new "canEdit" user was successfully created, 
             // add the "canEdit" user to the "canEdit" role. 
             if (!userMgr.IsInRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit"))
             {
                 IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "canEdit");
+            }
+            if (!userMgr.IsInRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "Administrator"))
+            {
+                IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("canEditUser@wingtiptoys.com").Id, "Administrator");
             }
         }
     }

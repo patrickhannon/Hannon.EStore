@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EStore.Account {
+namespace WingtipToys.Account {
     
     
     public partial class OpenAuthProviders {

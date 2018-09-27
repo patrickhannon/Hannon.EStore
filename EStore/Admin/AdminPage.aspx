@@ -37,10 +37,40 @@
             </td>
         </tr>
         <tr>
+            <td><asp:Label ID="LabelAddQtyInStock" runat="server">Qty In Stock:</asp:Label></td>
+            <td>
+                <asp:TextBox ID="AddQtyInStock" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" Text="* Quantity required." ControlToValidate="AddQtyInStock" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" Text="* Must be a valid qty." ControlToValidate="AddQtyInStock" SetFocusOnError="True" Display="Dynamic" ValidationExpression="^[0-9]*(\.)?[0-9]?[0-9]?$"></asp:RegularExpressionValidator>
+            </td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="LabelAddWeight" runat="server">Weight:</asp:Label></td>
+            <td>
+                <asp:TextBox ID="AddWeight" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" Text="* Weight required." ControlToValidate="AddWeight" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" Text="* Must be a valid weight." ControlToValidate="AddWeight" SetFocusOnError="True" Display="Dynamic" ValidationExpression="^[0-9]*(\.)?[0-9]?[0-9]?$"></asp:RegularExpressionValidator>
+            </td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="LabelSku" runat="server">Sku:</asp:Label></td>
+            <td>
+                <asp:TextBox ID="AddSku" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" Text="* Sku required." ControlToValidate="AddSku" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+             </td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="LabelAddManufacturer" runat="server">Manufacturer:</asp:Label></td>
+            <td>
+                <asp:TextBox ID="AddManufacturer" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Text="* Sku required." ControlToValidate="AddManufacturer" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+             </td>
+        </tr>
+        <tr>
             <td><asp:Label ID="LabelAddImageFile" runat="server">Image File:</asp:Label></td>
             <td>
                 <asp:FileUpload ID="ProductImage" runat="server" />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" Text="* Image path required." ControlToValidate="ProductImage" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" Text="* Image path required." ControlToValidate="ProductImage" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
             </td>
         </tr>
     </table>
@@ -48,6 +78,29 @@
     <p></p>
     <asp:Button ID="AddProductButton" runat="server" Text="Add Product" OnClick="AddProductButton_Click"  CausesValidation="true"/>
     <asp:Label ID="LabelAddStatus" runat="server" Text=""></asp:Label>
+    
+    <h3>Add Category:</h3>
+    <table>
+    <tr>
+        <td><asp:Label ID="LblAddCategory" runat="server">Name:</asp:Label></td>
+        <td>
+            <asp:TextBox ID="AddCategory" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" Text="* Category name required." ControlToValidate="AddCategory" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td><asp:Label ID="LblAddCategoryDesc" runat="server">Description:</asp:Label></td>
+        <td>
+            <asp:TextBox ID="AddCategoryDesc" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" Text="* Description required." ControlToValidate="AddCategoryDesc" SetFocusOnError="true" Display="Dynamic"></asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    </table>
+    <p></p>
+    <p></p>
+    <asp:Button ID="AddCategoryButton" runat="server" Text="Add Category" OnClick="AddCategoryButton_Click"  CausesValidation="true"/>
+    <asp:Label ID="LabelAddCategorStatus" runat="server" Text=""></asp:Label>
+
     <p></p>
     <h3>Remove Product:</h3>
     <table>

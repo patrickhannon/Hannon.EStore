@@ -23,6 +23,22 @@ namespace EStore.Admin
                 LabelRemoveStatus.Text = "Product removed!";
             }
         }
+
+        protected void AddCategoryButton_Click(object sender, EventArgs e)
+        {
+            AddCategories categories = new AddCategories();
+            bool addSuccess = categories.AddCategory(AddCategory.Text, AddCategoryDesc.Text);
+            if (addSuccess)
+            {
+                // Reload the page.
+                string pageUrl = Request.Url.AbsoluteUri.Substring(0, Request.Url.AbsoluteUri.Count() - Request.Url.Query.Count());
+                Response.Redirect(pageUrl + "?CategoryAction=add");
+            }
+            else
+            {
+                LabelAddStatus.Text = "Unable to add new category to database.";
+            }
+        }
         protected void AddProductButton_Click(object sender, EventArgs e)
         {
             Boolean fileOK = false;
@@ -57,7 +73,8 @@ namespace EStore.Admin
                 // Add product data to DB.
                 AddProducts products = new AddProducts();
                 bool addSuccess = products.AddProduct(AddProductName.Text, AddProductDescription.Text,
-                    AddProductPrice.Text, DropDownAddCategory.SelectedValue, ProductImage.FileName);
+                    AddProductPrice.Text, DropDownAddCategory.SelectedValue, ProductImage.FileName,
+                    AddQtyInStock.Text, AddWeight.Text, AddSku.Text, AddManufacturer.Text);
                 if (addSuccess)
                 {
                     // Reload the page.

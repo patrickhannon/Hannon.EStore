@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.UI.WebControls;
+using EStore;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
@@ -93,7 +95,6 @@ namespace EStore.Account
         protected void RemovePhone_Click(object sender, EventArgs e)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var result = manager.SetPhoneNumber(User.Identity.GetUserId(), null);
             if (!result.Succeeded)
             {
@@ -102,7 +103,7 @@ namespace EStore.Account
             var user = manager.FindById(User.Identity.GetUserId());
             if (user != null)
             {
-                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                IdentityHelper.SignIn(manager, user, isPersistent: false);
                 Response.Redirect("/Account/Manage?m=RemovePhoneNumberSuccess");
             }
         }

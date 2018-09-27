@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EStore;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 
@@ -47,13 +48,12 @@ namespace EStore.Account
         public void RemoveLogin(string loginProvider, string providerKey)
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var result = manager.RemoveLogin(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
             string msg = String.Empty;
             if (result.Succeeded)
             {
                 var user = manager.FindById(User.Identity.GetUserId());
-                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                IdentityHelper.SignIn(manager, user, isPersistent: false);
                 msg = "?m=RemoveLoginSuccess";
             }
             Response.Redirect("~/Account/ManageLogins" + msg);
