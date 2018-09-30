@@ -11,6 +11,7 @@ namespace EStore
 {
     public partial class AddToCart : System.Web.UI.Page
     {
+        //[Authorize]
         protected void Page_Load(object sender, EventArgs e)
         {
             string rawId = Request.QueryString["ProductID"];
